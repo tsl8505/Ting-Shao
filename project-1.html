@@ -70,8 +70,24 @@
 							<FONT SIZE=5>Introduction</FONT>
 						
 								<p>This project focuses on using R to visualize data on electrical power generation in the US, and use shiny to give people an interactive interface to create those visualizations.</p>
-								<p>This data file contains data from 1990 to 2019 for all 50 US states plus the District of Columbia plus the total US.
-Among them, we only use the data with TYPE OF PRODUCER == “Total Electric Power Industry”, and only visualize the nine common energy sources and the total.</p>
+								<p>The libraries used in this project are as follows:<br>
+							<ul>
+									<li>library(shiny)</li>
+									<li>library(shinydashboard)</li>
+									<li>library(ggplot2)</li>
+									<li>library(lubridate)</li>
+									<li>library(DT)</li>
+									<li>library(jpeg)</li>
+									<li>library(grid)</li>
+									<li>library(leaflet)</li>
+									<li>library(scales)</li>
+									<li>library(usmap)</li>
+									<li>library(stringr)</li>
+									
+								</ul>
+							
+							</p>
+								
 							
 							
 							<FONT SIZE=5>How to run this application</FONT>
@@ -96,6 +112,8 @@ Among them, we only use the data with TYPE OF PRODUCER == “Total Electric Powe
 							<p>The original data is available from <a href="https://www.eia.gov/electricity/data/state/">EIA</a>. <br>
 							The U.S. Energy Information Administration (EIA)  provides a wide range of information and data products covering energy production, stocks, demand, imports, exports, and prices and prepares analyses and special reports on topics of current interest.</p>
 							<p>The csv file I use is available <a href="https://www.evl.uic.edu/aej/424/annual_generation_state.csv" target="_blank">here</a>, made by Prof. Andy Johnson.</p>
+							<p>This data file contains data from 1990 to 2019 for all 50 US states plus the District of Columbia plus the total US.
+Among them, we only use the data with TYPE OF PRODUCER == “Total Electric Power Industry”, and only visualize the nine common energy sources and the total.</p>
 	
 							
 							<FONT SIZE=5>Interesting things I found</FONT>
