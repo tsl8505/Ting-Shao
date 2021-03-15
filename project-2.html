@@ -1,1 +1,175 @@
 
+<!DOCTYPE HTML>
+<!--
+	Iridium by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Ting-Shao project 1</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">Ting-Shao</a></h1>
+					<span>CS 424 Spring 2021</span>
+				</div>
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Homepage</a></li>
+						<li class="active"><a href="project-1.html">Project 1</a></li>
+						<li><a href="project-2.html">Project 2</a></li>
+						<li><a href="project-3.html">Project 3</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row"> 
+					
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2>Project 1</h2>
+								<span class="byline">Power and the Passion</span>
+							</header>
+							<a href="#" class="image full"><img src="images/pic07.jpg" alt="" /></a>
+							<ul>
+								<li><a href="https://tingshao667993792.shinyapps.io/project1/" target="_blank">link to my Shinyapps site</a></li>
+								<li><a href="https://github.com/Ting-Shao/CS424-Project-1" target="_blank">link to github project site</a></li>
+							</ul>
+							<br>
+							
+							<FONT SIZE=5>Introduction</FONT>
+						
+								<p>This project focuses on using R to visualize data on electrical power generation in the US, and use shiny to give people an interactive interface to create those visualizations.</p>
+								<p>In this building process, there are many details that need attention, such as interface design, fonts, color, legend and all kinds of setting used in a plot. </p>
+								<p>The libraries used in this project are as follows:
+							<ul>
+									<li>library(shiny)</li>
+									<li>library(shinydashboard)</li>
+									<li>library(ggplot2)</li>
+									<li>library(lubridate)</li>
+									<li>library(DT)</li>
+									<li>library(jpeg)</li>
+									<li>library(grid)</li>
+									<li>library(leaflet)</li>
+									<li>library(scales)</li>
+									<li>library(usmap)</li>
+									<li>library(stringr)</li>
+									
+								</ul>
+							
+							</p>
+								
+							
+							
+							<FONT SIZE=5>How to run this application</FONT>
+							
+							<p>To run this application, we need to give two sets of parameters. 
+								The two sets of parameters:</p>
+							
+								<li>State1, Energy source1, Year1</li>
+								<li>State2, Energy source2, Year2</li>
+							<a href="#" class="image full"><img src="images/twosets.png" alt="" /></a>
+							
+							<p>I mainly use four ways to present information— Stacked bar chart, Line chart, Table of raw numbers, Heat map.</p>
+							
+								<li>Stacked bar chart helps us quickly see the difference between Energy sources</li>
+								<li>Line chart can quickly shows us the trend of energy changes over time</li>
+								<li>Table of raw numbers allows users to directly obtain data.</li>
+								Here we can view the energy source we want to see by adjusting the checkbox and omit the energy we are not interested in 
+								<li>Heat maps let us see the difference of a specific energy source in a specific year between states at a glance.</li>
+							</p>
+							<p> The other function of this app is to show 5 interesting comparisons by clicking"Interesting comparisons" on the sidebar.</p>
+							
+							<FONT SIZE=5>Data</FONT>
+							<p>The original data is available from <a href="https://www.eia.gov/electricity/data/state/">EIA</a>. <br>
+							The U.S. Energy Information Administration (EIA)  provides a wide range of information and data products covering energy production, stocks, demand, imports, exports, and prices and prepares analyses and special reports on topics of current interest.</p>
+							<p>The csv file I use is available <a href="https://www.evl.uic.edu/aej/424/annual_generation_state.csv" target="_blank">here</a>, made by Prof. Andy Johnson.</p>
+							<p>This data file contains data from 1990 to 2019 for all 50 US states plus the District of Columbia plus the total US.
+Among them, we only use the data with TYPE OF PRODUCER == “Total Electric Power Industry”, and only visualize the nine common energy sources and the total.</p>
+	
+							
+							<FONT SIZE=5>Interesting things I found</FONT>
+							<br>
+								<FONT SIZE=4>1 Coal 1990 V.S. Coal 2019</FONT>
+									<p>From the geographical comparison, we can see that the relationship between total coal production in each state has changed little over time, but the percentage difference has changed significantly. This shows that other energy sources have undergone significant changes at this time, and people's dependence on coal for energy is also declining.</p>
+									<a href="#" class="image full"><img src="images/i1.png" alt="" /></a>
+								<FONT SIZE=4>2 Natural gas 1990 V.S. Natural gas 2019</FONT>
+									<p>Natural gas's share of energy in U.S. states is increasing day by day. From the comparison between 1990 and 2019, it is also obvious that the East Coast of the United States has attached great importance to the development of natural gas in these years. </p>
+									<a href="#" class="image full"><img src="images/i2.png" alt="" /></a>
+								<FONT SIZE=4>3 Solar 1990 V.S.Wind 1990</FONT>
+									<p>
+									The third one is to show the renewable energy source in 1990. 
+									The gray area in the picture is the area without data, that is, the state does not produce this energy .
+									It is not difficult to see that the West Coast of the United States is a pioneer in the development of renewable energy.
+									</p>
+									<a href="#" class="image full"><img src="images/i3.png" alt="" /></a>
+									
+								<FONT SIZE=4>4</FONT>
+									<p><small>I didn't do this part</small></p>	
+								<FONT SIZE=4>5 Coal 2019 V.S. Natural gas</FONT>
+									<p>The last one is a comparison of the two most important energy sources in the US: coal V.S. natural gas.
+										From this picture, we can get the information that the energy production in the coastal areas of the United States is dominated by natural gas, while the inland areas are dominated by coal.</p>
+									<a href="#" class="image full"><img src="images/i5.png" alt="" /></a>
+									
+							<FONT SIZE=5>Introduction video</FONT>
+								<br>
+							<iframe width="749" height="421" src="https://www.youtube.com/embed/5gqhWEL9ho0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<br>
+					<FONT SIZE=5>Review </FONT>
+					<br>
+							To me this project is challenging and frustrating. Even if I have put a lot of effort on it, however, there is stll a lot of room for improvement .
+
+					<ol>
+						<li>User interface: I don’t think I have designed it very well. My interface has exceeded the screen limit, forcing users to scroll to browse the entire page.</li>
+						<li>Code: I think my code has a lot of redudant parts, although the app itself does not shows. </li>
+					</ol>
+					            
+							
+						</section>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+		
+	</body>
