@@ -68,13 +68,14 @@
 							<br>
 							
 							<FONT SIZE=5>Introduction</FONT>
-						
-								<p>This project focuses on using R to visualize data on electrical power generation in the US, and use shiny to give people an interactive interface to create those visualizations.</p>
-								<p>In this building process, there are many details that need attention, such as interface design, fonts, color, legend and all kinds of setting used in a plot. </p>
+								<p>This project focuses on using R, Shiny, ggplot2 and leaflet to give people an interactive interface and visualize data on electrical power generation in the US.</p>
+								<p>Different from project 1, Here we dive inside the state boundaries to look at the actual locations of the different plants (based on their latitude and longitude) and see how geographic as well as political boundaries affect coal / gas / solar / hydro / etc energy production in the US.</p>
+								<p>In this project, we use Leaflet, which is one of the most popular open-source libraries for interactive maps, to visualize the data. </p>
 								<p>The libraries used in this project are as follows:
 							<ul>
 									<li>library(shiny)</li>
 									<li>library(shinydashboard)</li>
+									<li>library(readxl)</li>
 									<li>library(ggplot2)</li>
 									<li>library(lubridate)</li>
 									<li>library(DT)</li>
@@ -95,7 +96,6 @@
 							
 							<p>To run this application, we need to give two sets of parameters. 
 								The two sets of parameters:</p>
-							
 								<li>State1, Energy source1, Year1</li>
 								<li>State2, Energy source2, Year2</li>
 							<a href="#" class="image full"><img src="images/twosets.png" alt="" /></a>
@@ -111,11 +111,14 @@
 							<p> The other function of this app is to show 5 interesting comparisons by clicking"Interesting comparisons" on the sidebar.</p>
 							
 							<FONT SIZE=5>Data</FONT>
-							<p>The original data is available from <a href="https://www.eia.gov/electricity/data/state/">EIA</a>. <br>
-							The U.S. Energy Information Administration (EIA)  provides a wide range of information and data products covering energy production, stocks, demand, imports, exports, and prices and prepares analyses and special reports on topics of current interest.</p>
-							<p>The csv file I use is available <a href="https://www.evl.uic.edu/aej/424/annual_generation_state.csv" target="_blank">here</a>, made by Prof. Andy Johnson.</p>
-							<p>This data file contains data from 1990 to 2019 for all 50 US states plus the District of Columbia plus the total US.
-Among them, we only use the data with TYPE OF PRODUCER == “Total Electric Power Industry”, and only visualize the nine common energy sources and the total.</p>
+							<p>The original data is available from <a href="https://www.epa.gov/egrid/download-data">Environmental Protection Agency(EPA)</a>.<br>
+							Mainly, we focus on </p>
+								<li>eGRID2018v2 Data File (XLSX)</li>
+									<p>For the first data file, we only look at data from the PLNT18 sheet. This sheet contains data from all plants in 2018 for all 50 US states.</p>
+								<li>eGRID historical files (1996-2016) (ZIP)</li>
+									<p>For the compressed file, we only look at EGRDPLNT00 in eGRID2000_plant.xls PLNT10 in eGRID2010_Data.xls. These sheets contain data from all plants for all 50 US states in 2000 and 2010 respectively.</p>
+							<p>Next, I make some changes to the data files before loading them into R to shrink the size of the data files and improve efficiency.<br>
+								The strategy is to keep only the columns that will be used in this project.</p>
 	
 							
 							<FONT SIZE=5>Interesting things I found</FONT>
