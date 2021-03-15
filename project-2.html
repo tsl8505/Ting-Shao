@@ -117,8 +117,31 @@
 									<p>For the first data file, we only look at data from the PLNT18 sheet. This sheet contains data from all plants in 2018 for all 50 US states.</p>
 								<li>eGRID historical files (1996-2016) (ZIP)</li>
 									<p>For the compressed file, we only look at EGRDPLNT00 in eGRID2000_plant.xls PLNT10 in eGRID2010_Data.xls. These sheets contain data from all plants for all 50 US states in 2000 and 2010 respectively.</p>
+							<p></p>
 							<p>Next, I make some changes to the data files before loading them into R to shrink the size of the data files and improve efficiency.<br>
 								The strategy is to keep only the columns that will be used in this project.</p>
+							<p>For PLNT18 in egrid2018_data_v2.xlsx:<br>
+								"SEQPLT18" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRMFL"  "PLFUELCT" "PLNGENAN"
+"PLGENACL" "PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO" "PLGENAGT"
+"PLGENAOF" "PLGENAOP" "PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"   "PLHYPR"  
+"PLBMPR"   "PLWIPR"   "PLSOPR"   "PLGTPR"   "PLOFPR"   "PLOPPR"   "PLTNPR"   "PLTRPR" 
+								
+					</p>
+							<p>For EGRDPLNT00 in eGRID2000_plant.xls:<br>
+								"SEQPLT00" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRIMFL" "PLNGENAN" "PLGENACL"
+"PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO" "PLGENAGT" "PLGENAOF"
+"PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"   "PLHYPR"   "PLBMPR"   "PLWIPR"  
+"PLSOPR"   "PLGTPR"   "PLOFPR"   "PLTNPR"   "PLTRPR"  
+								
+					</p>
+					<p>For PLNT10 in eGRID2010_Data.xls:<br>
+						"SEQPLT10" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRMFL"  "PLFUELCT" "PLPFGNCT"
+"PLNGENAN" "PLGENACL" "PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO"
+"PLGENAGT" "PLGENAOF" "PLGENAOP" "PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"  
+"PLHYPR"   "PLBMPR"   "PLWIPR"   "PLSOPR"   "PLGTPR"   "PLOFPR"   "PLOPPR"   "PLTNPR"   "PLTRPR"  
+					</p>
+								
+								
 	
 							
 							<FONT SIZE=5>Interesting things I found</FONT>
