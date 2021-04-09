@@ -149,106 +149,14 @@
 									</p>
 
 							</p>
-						<FONT SIZE=4>Plants in Illinois</FONT>
-						<p>In this page, is shows a properly centered and scaled leaflet map of Illinois showing the plant data in 2018. Power plants are colored by type. </p>
-						<p>For input control, There are sets of check boxes, one for each energy source, plus 'all' (where all is the default selection), renewables, and non-renewables, allowing the user to filter which energy sources are shown on the map. Besides, a reset button is offered to go back to the original view.</p>
-						
-						<a href="#" class="image full"><img src="images/pj2_Plants in Illinois.png" alt="Plants in Illinois.png" ></a>
-						<br>
-						
-						<FONT SIZE=4>Split screen visualization</FONT>
-						<p>On the basis of the previous page, some functions have been expanded. </p>
-						<p>
-							<li>Split screen:</li>
-							This page split two parts allowing users to compare the plants status in different year and different state.
-							<li>3 different layers:</li>
-							It also allow the user to choose from 3 different useful leaflet map types—OSM, OpenTopoMap, Toner lite.
-							<li>Popup function:</li>
-							clicking on a marker shows the plant name, and its generation capacity (for the different types it has), the percent of the total capacity that is renewable, and the percent of the total capacity that is non-renewable
-						
-						</p>
-						<a href="#" class="image full"><img src="images/pj2_Split screen visualization.png" alt="Split screen visualization.png" ></a>
-						<br>
-						
+						<FONT SIZE=7>What works?</FONT>
+					
+						<FONT SIZE=7>What needs improvement? </FONT>
+					
 	
-						<FONT SIZE=4>Plants in the US</FONT>
-						<p>Compared with the above two pages, this page has more new features. </p>
-						<p>
-							<li>Entire US:</li>
-							In addition to each of the 50 states the user would be able to pick the entire US.
-							<li>Slider function:</li>
-							The user could filter the showing plants by generation amount.
-							<li>Cluster:</li>
-							This one shows a lot of markers, so I added the cluster option to make it faster. When many markers are concentrated, cluster will be displayed
 						
-						</p>
-						<a href="#" class="image full"><img src="images/pj2_Plants in the US.png" alt="Plants in the US.png" ></a>
-						<br>
-						
-						<FONT SIZE=4>Plants added or idled</FONT>
-						<p>
-							This page shows the plants added or idled in 2010 and 2018 by Cross compare data in 2000, 2010 and 2018. Idled plants and added plants are divided into two groups. The user could use the checkbox in the map to select which group to show. 
-						</p>
-						<a href="#" class="image full"><img src="images/pj2_Plants added or idled.png" alt="Plants added or idled.png" ></a>	
-						<br>
-						
-						<br>
-						<br>
-							<FONT SIZE=7>Data</FONT>
-							<p>The original data is available from <a href="https://www.epa.gov/egrid/download-data">Environmental Protection Agency(EPA)</a>.<br>
-							Mainly, we focus on </p>
-								<li>eGRID2018v2 Data File (XLSX)</li>
-									<p>For the first data file, we only look at data from the PLNT18 sheet. This sheet contains data from all plants in 2018 for all 50 US states.</p>
-								<li>eGRID historical files (1996-2016) (ZIP)</li>
-									<p>For the compressed file, we only look at EGRDPLNT00 in eGRID2000_plant.xls PLNT10 in eGRID2010_Data.xls. These sheets contain data from all plants for all 50 US states in 2000 and 2010 respectively.</p>
-					<img src="images/pj2_download.png" alt="Download page in EPA" width="565" height="689">
-					<p></p>
-							<p>Next, I make some changes to the data files before loading them into R to shrink the size of the data files and improve efficiency.<br>
-								The strategy is to keep only the columns that will be used in this project.</p>
-							<p>For PLNT18 in egrid2018_data_v2.xlsx:<br>
-								"SEQPLT18" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRMFL"  "PLFUELCT" "PLNGENAN"
-"PLGENACL" "PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO" "PLGENAGT"
-"PLGENAOF" "PLGENAOP" "PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"   "PLHYPR"  
-"PLBMPR"   "PLWIPR"   "PLSOPR"   "PLGTPR"   "PLOFPR"   "PLOPPR"   "PLTNPR"   "PLTRPR" 
-								
-					</p>
-							<p>For EGRDPLNT00 in eGRID2000_plant.xls:<br>
-								"SEQPLT00" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRIMFL" "PLNGENAN" "PLGENACL"
-"PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO" "PLGENAGT" "PLGENAOF"
-"PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"   "PLHYPR"   "PLBMPR"   "PLWIPR"  
-"PLSOPR"   "PLGTPR"   "PLOFPR"   "PLTNPR"   "PLTRPR"  
-								
-					</p>
-					<p>For PLNT10 in eGRID2010_Data.xls:<br>
-						"SEQPLT10" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRMFL"  "PLFUELCT" "PLPFGNCT"
-"PLNGENAN" "PLGENACL" "PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO"
-"PLGENAGT" "PLGENAOF" "PLGENAOP" "PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"  
-"PLHYPR"   "PLBMPR"   "PLWIPR"   "PLSOPR"   "PLGTPR"   "PLOFPR"   "PLOPPR"   "PLTNPR"   "PLTRPR"  
-					</p>
-								
-								
-	
-						<br>
-						<br>
-							<FONT SIZE=7>Interesting things I found</FONT>
-							<br>
-								<FONT SIZE=4>1 Renewable energy plants in 2000, 2010 and 2018</FONT>
-									<p>I use the third visualization to see the renewable sources in the entire US. Compare difference between 2000, 2010, 2018. We can easily see the trend that the number of renewable energy plants has been rising.</p>
-									
-						<img src="images/pj2_i1_2000.png" alt="" width="720" height="406"/><br>
-						<img src="images/pj2_i1_2010.png" alt="" width="720" height="406"/><br>
-						<img src="images/pj2_i1_2018.png" alt="" width="720" height="406"/>
-						<br>
-						<FONT SIZE=4>2 Non-renewable energy plants in 2000, 2010 and 2018</FONT>
-						<p>
-							Next, let’s see the variation of non-renewable energy plants across 2000, 2010, 2018.<br>
-							Variation in the total amount of non-renewable energy plants is relatively small.<br>
-							2429 (2000)-> 2637 (2010)-> 2579 (2018)
-						</p>
-						<img src="images/pj2_i2_2000.png" alt="" width="720" height="406"/><br>
-						<img src="images/pj2_i2_2010.png" alt="" width="720" height="406"/><br>
-						<img src="images/pj2_i2_2018.png" alt="" width="720" height="406"/>
-								
+					
+					
 								
 						<br>
 						<br>
