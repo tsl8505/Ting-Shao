@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<!--
+	Iridium by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Ting-Shao project 2</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">Ting-Shao</a></h1>
+					<span>CS 424 Spring 2021</span>
+				</div>
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Homepage</a></li>
+						<li><a href="project-1.html">Project 1</a></li>
+						<li><a href="project-2.html">Project 2</a></li>
+						<li class="active"><a href="project-3.html">Project 3</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row"> 
+					
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2>Project 2</h2>
+								<span class="byline">Raw Power</span>
+							</header>
+							<a href="#" class="image full"><img src="images/pic07.jpg" alt="" /></a>
+							<ul>
+								<li><a href="https://tingshao667993792.shinyapps.io/project2/" target="_blank">link to my Shinyapps site</a></li>
+								<li><a href="https://github.com/Ting-Shao/CS424-Project-2" target="_blank">link to github project site</a></li>
+							</ul>
+							<br>
+							
+							<FONT SIZE=7>Introduction</FONT>
+								<p>This project focuses on using R, Shiny, ggplot2 and leaflet to give people an interactive interface and visualize data on electrical power generation in the US.</p>
+								<p>Different from project 1, Here we dive inside the state boundaries to look at the actual locations of the different plants (based on their latitude and longitude) and see how geographic as well as political boundaries affect coal / gas / solar / hydro / etc energy production in the US.</p>
+								<p>In this project, we use Leaflet, which is one of the most popular open-source libraries for interactive maps, to visualize the data. </p>
+								<p>The libraries used in this project are as follows:
+							<ul>
+									<li>library(shiny)</li>
+									<li>library(shinydashboard)</li>
+									<li>library(readxl)</li>
+									<li>library(ggplot2)</li>
+									<li>library(lubridate)</li>
+									<li>library(DT)</li>
+									<li>library(jpeg)</li>
+									<li>library(grid)</li>
+									<li>library(leaflet)</li>
+									<li>library(scales)</li>
+									<li>library(usmap)</li>
+									<li>library(stringr)</li>
+									
+								</ul>
+							
+							</p>
+								
+							
+							
+						<FONT SIZE=7>How to run this application</FONT>
+						<p>There are four sections for this app—Plants in Illinois, Split screen visualization, Plants in the US, Plants added or idled.</p>
+						
+						
+						<FONT SIZE=4>Plants in Illinois</FONT>
+						<p>In this page, is shows a properly centered and scaled leaflet map of Illinois showing the plant data in 2018. Power plants are colored by type. </p>
+						<p>For input control, There are sets of check boxes, one for each energy source, plus 'all' (where all is the default selection), renewables, and non-renewables, allowing the user to filter which energy sources are shown on the map. Besides, a reset button is offered to go back to the original view.</p>
+						
+						<a href="#" class="image full"><img src="images/pj2_Plants in Illinois.png" alt="Plants in Illinois.png" ></a>
+						<br>
+						
+						<FONT SIZE=4>Split screen visualization</FONT>
+						<p>On the basis of the previous page, some functions have been expanded. </p>
+						<p>
+							<li>Split screen:</li>
+							This page split two parts allowing users to compare the plants status in different year and different state.
+							<li>3 different layers:</li>
+							It also allow the user to choose from 3 different useful leaflet map types—OSM, OpenTopoMap, Toner lite.
+							<li>Popup function:</li>
+							clicking on a marker shows the plant name, and its generation capacity (for the different types it has), the percent of the total capacity that is renewable, and the percent of the total capacity that is non-renewable
+						
+						</p>
+						<a href="#" class="image full"><img src="images/pj2_Split screen visualization.png" alt="Split screen visualization.png" ></a>
+						<br>
+						
+	
+						<FONT SIZE=4>Plants in the US</FONT>
+						<p>Compared with the above two pages, this page has more new features. </p>
+						<p>
+							<li>Entire US:</li>
+							In addition to each of the 50 states the user would be able to pick the entire US.
+							<li>Slider function:</li>
+							The user could filter the showing plants by generation amount.
+							<li>Cluster:</li>
+							This one shows a lot of markers, so I added the cluster option to make it faster. When many markers are concentrated, cluster will be displayed
+						
+						</p>
+						<a href="#" class="image full"><img src="images/pj2_Plants in the US.png" alt="Plants in the US.png" ></a>
+						<br>
+						
+						<FONT SIZE=4>Plants added or idled</FONT>
+						<p>
+							This page shows the plants added or idled in 2010 and 2018 by Cross compare data in 2000, 2010 and 2018. Idled plants and added plants are divided into two groups. The user could use the checkbox in the map to select which group to show. 
+						</p>
+						<a href="#" class="image full"><img src="images/pj2_Plants added or idled.png" alt="Plants added or idled.png" ></a>	
+						<br>
+						
+						<br>
+						<br>
+							<FONT SIZE=7>Data</FONT>
+							<p>The original data is available from <a href="https://www.epa.gov/egrid/download-data">Environmental Protection Agency(EPA)</a>.<br>
+							Mainly, we focus on </p>
+								<li>eGRID2018v2 Data File (XLSX)</li>
+									<p>For the first data file, we only look at data from the PLNT18 sheet. This sheet contains data from all plants in 2018 for all 50 US states.</p>
+								<li>eGRID historical files (1996-2016) (ZIP)</li>
+									<p>For the compressed file, we only look at EGRDPLNT00 in eGRID2000_plant.xls PLNT10 in eGRID2010_Data.xls. These sheets contain data from all plants for all 50 US states in 2000 and 2010 respectively.</p>
+					<img src="images/pj2_download.png" alt="Download page in EPA" width="565" height="689">
+					<p></p>
+							<p>Next, I make some changes to the data files before loading them into R to shrink the size of the data files and improve efficiency.<br>
+								The strategy is to keep only the columns that will be used in this project.</p>
+							<p>For PLNT18 in egrid2018_data_v2.xlsx:<br>
+								"SEQPLT18" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRMFL"  "PLFUELCT" "PLNGENAN"
+"PLGENACL" "PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO" "PLGENAGT"
+"PLGENAOF" "PLGENAOP" "PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"   "PLHYPR"  
+"PLBMPR"   "PLWIPR"   "PLSOPR"   "PLGTPR"   "PLOFPR"   "PLOPPR"   "PLTNPR"   "PLTRPR" 
+								
+					</p>
+							<p>For EGRDPLNT00 in eGRID2000_plant.xls:<br>
+								"SEQPLT00" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRIMFL" "PLNGENAN" "PLGENACL"
+"PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO" "PLGENAGT" "PLGENAOF"
+"PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"   "PLHYPR"   "PLBMPR"   "PLWIPR"  
+"PLSOPR"   "PLGTPR"   "PLOFPR"   "PLTNPR"   "PLTRPR"  
+								
+					</p>
+					<p>For PLNT10 in eGRID2010_Data.xls:<br>
+						"SEQPLT10" "PSTATABB" "PNAME"    "ORISPL"   "LAT"      "LON"      "PLPRMFL"  "PLFUELCT" "PLPFGNCT"
+"PLNGENAN" "PLGENACL" "PLGENAOL" "PLGENAGS" "PLGENANC" "PLGENAHY" "PLGENABM" "PLGENAWI" "PLGENASO"
+"PLGENAGT" "PLGENAOF" "PLGENAOP" "PLGENATN" "PLGENATR" "PLCLPR"   "PLOLPR"   "PLGSPR"   "PLNCPR"  
+"PLHYPR"   "PLBMPR"   "PLWIPR"   "PLSOPR"   "PLGTPR"   "PLOFPR"   "PLOPPR"   "PLTNPR"   "PLTRPR"  
+					</p>
+								
+								
+	
+						<br>
+						<br>
+							<FONT SIZE=7>Interesting things I found</FONT>
+							<br>
+								<FONT SIZE=4>1 Renewable energy plants in 2000, 2010 and 2018</FONT>
+									<p>I use the third visualization to see the renewable sources in the entire US. Compare difference between 2000, 2010, 2018. We can easily see the trend that the number of renewable energy plants has been rising.</p>
+									
+						<img src="images/pj2_i1_2000.png" alt="" width="720" height="406"/><br>
+						<img src="images/pj2_i1_2010.png" alt="" width="720" height="406"/><br>
+						<img src="images/pj2_i1_2018.png" alt="" width="720" height="406"/>
+						<br>
+						<FONT SIZE=4>2 Non-renewable energy plants in 2000, 2010 and 2018</FONT>
+						<p>
+							Next, let’s see the variation of non-renewable energy plants across 2000, 2010, 2018.<br>
+							Variation in the total amount of non-renewable energy plants is relatively small.<br>
+							2429 (2000)-> 2637 (2010)-> 2579 (2018)
+						</p>
+						<img src="images/pj2_i2_2000.png" alt="" width="720" height="406"/><br>
+						<img src="images/pj2_i2_2010.png" alt="" width="720" height="406"/><br>
+						<img src="images/pj2_i2_2018.png" alt="" width="720" height="406"/>
+								
+								
+						<br>
+						<br>
+							<FONT SIZE=5>Introduction video</FONT><br>
+						<iframe width="884" height="497" src="https://www.youtube.com/embed/pbOL7paHjt0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<br>
+							
+					<br>
+
+	
+					            
+							
+						</section>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+		
+	</body>
