@@ -1,1 +1,397 @@
 
+<!DOCTYPE HTML>
+<!--
+	Iridium by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Ting-Shao project X</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		
+		<style>
+		table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		th.column {
+		  width: 30%
+		}
+/* 		th.discription {
+		  width: 70%; 
+		} */
+
+
+
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+		</style>
+	</head>
+	<body class="no-sidebar">
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">Ting-Shao</a></h1>
+					<span>CS 424 Spring 2021</span>
+				</div>
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Homepage</a></li>
+						<li><a href="project-1.html">Project 1</a></li>
+						<li><a href="project-2.html">Project 2</a></li>
+            <li><a href="project-3.html">Project 2</a></li>
+						<li class="active"><a href="project-X.html">Project 3</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row"> 
+					
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2>Project 3</h2>
+								<span class="byline">We've Got the Power</span>
+							</header>
+							<a href="#" class="image full"><img src="images/pic07.jpg" alt="" /></a>
+							<ul>
+								<li><a href="https://tingshao667993792.shinyapps.io/Project3/" target="_blank">link to my Shinyapps site</a></li>
+								<li><a href="https://github.com/Ting-Shao/CS424-Project-3" target="_blank">link to github project site</a></li>
+							</ul>
+							<br>
+							
+							<FONT SIZE=7>Introduction</FONT>
+								<p>This project will focus on using R to visualize data on electrical power usage in Chicago in 2010, and use shiny to give people an interactive interface to create those visualizations.</p>
+								<p>Here we are going to look at data on electricity and gas usage by census block in the city of Chicago to see how neighborhoods, types of buildings, age of buildings can affect how much power is used throughout the year. This project can also serve as a model for looking at other kinds of census data related to the Chicago (or other areas of the US).</p>
+								<p>Different from project 2, we use Mapview, which is one of the most popular open-source libraries for interactive maps, to visualize the data. </p>
+								
+								
+							
+							
+						<FONT SIZE=7>How to run this application</FONT>
+						<p>There are three sections for this app —- Near West Side, Split screen visualization, Entire city of Chicago at the tract level.</p>
+						
+						
+						<FONT SIZE=4>Near West Side</FONT>
+						<p>In this page, it shows a properly centered and scaled mapview map of the Near West Side Community Area.</p>
+						<p>For input control, There are three select inputs and one reset button. <br>
+							The first one allows the user to choose to see Gas or Electricity or Building Age or Building Type or Building Height or Total Population.<br>
+							The second one allows the user to filter out one particular kind of building type or to see all building types.<br>
+							If the first input is choosed to be Gas or Electricity, the user will then pick a particular month or the total for the entire year to display.<br>
+							The reset button allows the user to return all parameters to the default settings.</p>
+						<p>When the parameters are set, the display is divided into three parts -- Mapview, Graph, Table</p>
+						
+						<p>
+							<li>Mapview:</li>
+							Mapview map of the Near West Side Community Area.<br>
+							By default it should show the total electrical usage over the entire year as a heatmap.<br>
+							And it adjust the attribute to be rendered of the heat map according to the user's selection on the display input.<br>
+							<img src="images/pj3_NWS_mapview.png" alt="pj3_NWS_mapview.png" width="864" height="540">
+							<li>Graph:</li>
+							This part shows two bar charts showing the total amount of electricity and gas used in the current census blocks being shown for each month of the year.<br>
+							<img src="images/pj3_NWS_graph.png" alt="pj3_NWS_graph.png" wwidth="864" height="540">
+							<li>Table:</li>
+							This part shows that same electricity and gas data as tables.<br>
+							<img src="images/pj3_NWS_table.png" alt="pj3_NWS_table.png" width="864" height="540" >
+						
+						</p>
+
+						<br>
+						
+						<FONT SIZE=4>Split screen visualization</FONT>
+						<p>We split the screen in two allowing users to compare the data in different community area. By default the left should show the Near West Side and the right should show the Loop with appropriately scaled and zoomed maps.</p>
+						<p>The display on both sides is based on the previous section.</p>
+						<img src="images/pj3_entrie_tract.png" alt="pj3_entrie_tract" width="864" height="540" >
+						<br>
+						
+	
+						<FONT SIZE=4>Entire city of Chicago at the tract level</FONT>
+						<p>Compared with the above two pages, in this section, we integrate the data from the census blocks into census tracts and allow the user to show the same data as above at the tract level for the entire City of Chicago.  </p>
+						<img src="images/pj3_entire_10.png" alt="pj3_entire_10.png" width="864" height="540" >
+						<p>The other new feature is that there is one tab allowing the user to show the 10% census tracts within the entire city with the:
+							<li>oldest buildings</li>
+							<li>newest building</li>
+							<li>tallest buildings</li>
+							<li>blocks that use the most electricity over the year</li>
+							<li>blocks that use the most gas over the year</li>
+							<li>most population</li>
+							<li>most occupied percentage</li>
+							<li>highest percentage of renters</li>  
+						</p>
+						<img src="images/pj3_split_mapview.png" alt="pj3_split_mapview.png" width="864" height="540" >
+						<br>
+						
+						
+						<br>
+						
+						<br>
+						<br>
+						<FONT SIZE=7>Data</FONT>
+							<p>
+								<FONT SIZE=4>Source</FONT><br>
+								The original data is available from <a href="https://www.kaggle.com/chicago/chicago-energy-usage-2010">kaggle</a>.<br>
+
+								and also available at <a href="https://data.cityofchicago.org/Environment-Sustainable-Development/Energy-Usage-2010/8yq3-m6wp">Chicago Data Portal</a>.<br>
+							</p>
+							<p>
+								<FONT SIZE=4>Content</FONT><br>
+								Displays several units of energy consumption for households, businesses, and industries in the City of Chicago during 2010. Electric The data was aggregated from ComEd and Peoples Natural Gas by Accenture. Electrical and gas usage data comprises 88 percent of Chicago's buildings in 2010. The electricity data comprises 68 percent of overall electrical usage in the city while gas data comprises 81 percent of all gas consumption in Chicago for 2010.<br>
+								<br>
+								Census blocks with less than 4 accounts is displayed at the Community Area without further geographic identifiers. This dataset also contains selected variables describing selected characteristics of the Census block population, physical housing, and occupancy.<br>
+								
+							</p>
+							<p>
+								In this project, I did not make changes to the data file before loading it into R.
+							</p>
+							Columns in this Dataset
+							<p>
+								<FONT SIZE=4>Columns in this Dataset</FONT><br>
+								There are 73 columns in the dataset, I am going to introduce a few that I use here.<br>
+								<br>
+							</p>
+							<table>
+							  <tr>
+							    <th class="column">Column</th>
+							    <th>Description</th>
+							  </tr>
+								
+								<tr>
+									<th>COMMUNITY AREA NAME </th>
+									<th>Community Name</th>
+								</tr>
+								<tr>
+									<th>CENSUS BLOCK</th> 
+									<th>Census Block number obtained in the address matching/geocoding algorithms. Blank Census Blocks correspond to data that was aggregated to the Community Area due to privacy issues.</th>
+									
+								</tr>
+								<tr>
+									<th>BUILDING TYPE</th>
+									<th>Building Type: Residential, Commercial, Industrial. Blank data corresponds to blank Census Blocks.</th>
+								</tr>
+								<tr>
+									<th>KWH JANUARY 2010</th>
+									<th>Kilowatt hours (kWh) for January 2010</th>
+								</tr>
+								<tr>
+									<th>KWH FEBRUARY 2010</th>
+									<th>Kilowatt hours (kWh) for February 2010</th>
+								</tr>
+								<tr>
+									<th>KWH MARCH 2010</th>
+									<th>Kilowatt hours (kWh) for March 2010</th>
+								</tr>
+								<tr>
+									<th>KWH APRIL 2010</th>
+									<th>Kilowatt hours (kWh) for April 2010</th>
+								</tr>
+								<tr>
+									<th>KWH MAY 2010</th>
+									<th>Kilowatt hours (kWh) for May 2010</th>
+								</tr>
+								<tr>
+									<th>KWH JUNE 201</th>
+									<th>Kilowatt hours (kWh) for June 2010</th>
+								</tr>
+								<tr>
+									<th>KWH JULY 2010</th>
+									<th>Kilowatt hours (kWh) for July 2010</th>
+								</tr>
+								<tr>
+									<th>KWH AUGUST 2010</th>
+									<th>Kilowatt hours (kWh) for August 2010</th>
+								</tr>
+								<tr>
+									<th>KWH SEPTEMBER 2010</th>
+									<th>Kilowatt hours (kWh) for September 2010</th>
+								</tr>
+								<tr>
+									<th>KWH OCTOBER 2010</th>
+									<th>Kilowatt hours (kWh) for October 2010</th>
+								</tr>
+								<tr>
+									<th>KWH NOVEMBER 2010</th>
+									<th>Kilowatt hours (kWh) for November 2010</th>
+								</tr>
+								<tr>
+									<th>KWH DECEMBER 2010</th>
+									<th>Kilowatt hours (kWh) for December 2010</th>
+								</tr>
+								<tr>
+									<th>TOTAL KWH</th>
+									<th>Total 2010 kWh from ComEd accounts.</th>
+								</tr>
+								<tr>
+									<th>THERM JANUARY 2010</th>
+									<th>Therm consumption for January 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM FEBRUARY 2010</th>
+									<th>Therm consumption for February 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM MARCH 2010</th>
+									<th>Therm consumption for March 2010.</th>
+								</tr>
+								<tr>
+									<th>TERM APRIL 2010</th>
+									<th>Therm consumption for April 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM MAY 2010</th>
+									<th>Therm consumption for May 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM JUNE 2010</th>
+									<th>Therm consumption for June 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM JULY 2010</th>
+									<th>Therm consumption for July 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM AUGUST 2010</th>
+									<th>Therm consumption for August 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM SEPTEMBER 2010</th>
+									<th>Therm consumption for September 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM OCTOBER 2010</th>
+									<th>Therm consumption for October 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM NOVEMBER 2010</th>
+									<th>Therm consumption for November 2010.</th>
+								</tr>
+								<tr>
+									<th>THERM DECEMBER 2010</th>
+									<th>Therm consumption for December 2010.</th>
+								</tr>
+								<tr>
+									<th>TOTAL THERMS</th>
+									<th>Total 2010 Therms from Peoples accounts.</th>
+								</tr>
+								<tr>
+									<th>TOTAL POPULATION</th>
+									<th>Total population from Census 2010 report (QT-P6) Race alone or in combination and Hispanic or Latino 2010.</th>
+								</tr>
+								<tr>
+									<th>AVERAGE STORIES</th>
+									<th>Average number of stories based on data from Cook County Assessor's Office.</th>
+								</tr>
+								<tr>
+									<th>AVERAGE BUILDING AGE</th>
+									<th>Average Age of the buildings based on data from Cook County Assessor's Office.</th>
+								</tr>
+								<tr>
+									<th>OCCUPIED UNITS PERCENTAGE</th>
+									<th></th>
+								</tr>
+								<tr>
+									<th>RENTER-OCCUPIED HOUSING PERCENTAGE</th>
+									<th>Percentage of occupied housing units that are renters from Census report (QT-H2) Tenure, Household Size and Age of Householder</th>
+								</tr>
+							</table>
+							
+							
+							
+					
+								
+								
+	
+						<br>
+						<br>
+							<FONT SIZE=7>Interesting things I found</FONT>
+							<br>
+							
+							<FONT SIZE=4>1 Electricity and Building stories have a strong connection</FONT>
+							<p>
+								I use the split visualization to show the building height and electricity simultaneously.<br>
+								It is obvious that census blocks with more tall buildings tend to have higher electricity usage<br>
+							</p>
+							<img src="images/pj3_i_EandB.png" alt="" width="864" height="540" ><br>
+						
+							<FONT SIZE=4>2 10% census tracts </FONT>
+							<p>
+								Focus on 10% census tracts for the entire Chicago City, I found that:<br>
+								
+								The blocks in the city center have several characteristics:
+								<li>Higher average stories of building</li>
+								<img src="images/pj3_i_tallestbuilding.png" alt="" width="864" height="540" ><br>
+								<li>Higher population density</li>
+								<img src="images/pj3_i_mostpopulation.png" alt="" width="864" height="540" ><br>
+								<li>Lower building age </li>
+								<img src="images/pj3_i_newestbuilding.png" alt="" width="864" height="540" ><br>
+								
+								Tracts with high occupied percentage of housing units and tracts with high percentage of occupied housing units that are renters are geographically dispersed.<br> 
+								They may not have much to do with the regionality.<br>
+								<img src="images/pj3_i_mostoccupied.png" alt="" width="720" height="406"/><br>
+								<img src="images/pj3_i_hprenter.png" alt="" width="720" height="406"/><br>
+								
+							</p>
+								
+								
+						<br>
+						<br>
+							<FONT SIZE=5>Introduction video</FONT><br>
+						<iframe width="882" height="496" src="https://www.youtube.com/embed/ARlWGE1Ra24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<br>
+							
+					<br>
+
+	
+					            
+							
+						</section>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+		
+	</body>
