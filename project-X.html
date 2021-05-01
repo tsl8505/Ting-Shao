@@ -123,170 +123,21 @@
 						<FONT SIZE=7>Data</FONT>
 							<p>
 								<FONT SIZE=4>Source</FONT><br>
-								The original data is available from <a href="https://www.kaggle.com/chicago/chicago-energy-usage-2010">kaggle</a>.<br>
-
-								and also available at <a href="https://data.cityofchicago.org/Environment-Sustainable-Development/Energy-Usage-2010/8yq3-m6wp">Chicago Data Portal</a>.<br>
+								The data file is available from <a href="https://datasets.wri.org/dataset/globalpowerplantdatabase">World Resources Institute (WRI)</a>.<br>
+								<br>
+								WRI is a global nonprofit organization that works with leaders in government, business and civil society to research, design, and carry out practical solutions that simultaneously improve people’s lives and ensure nature can thrive.<br>
+							
 							</p>
 							<p>
-								<FONT SIZE=4>Content</FONT><br>
-								Displays several units of energy consumption for households, businesses, and industries in the City of Chicago during 2010. Electric The data was aggregated from ComEd and Peoples Natural Gas by Accenture. Electrical and gas usage data comprises 88 percent of Chicago's buildings in 2010. The electricity data comprises 68 percent of overall electrical usage in the city while gas data comprises 81 percent of all gas consumption in Chicago for 2010.<br>
+								<FONT SIZE=4>Description</FONT><br>
+								The Global Power Plant Database is a comprehensive, open source database of power plants around the world. It centralizes power plant data to make it easier to navigate, compare and draw insights for one’s own analysis. The database covers approximately 30,000 power plants from 164 countries and includes thermal plants (e.g. coal, gas, oil, nuclear, biomass, waste, geothermal) and renewables (e.g. hydro, wind, solar). Each power plant is geolocated and entries contain information on plant capacity, generation, ownership, and fuel type. It will be continuously updated as data becomes available.
 								<br>
-								Census blocks with less than 4 accounts is displayed at the Community Area without further geographic identifiers. This dataset also contains selected variables describing selected characteristics of the Census block population, physical housing, and occupancy.<br>
 								
 							</p>
 							<p>
 								In this project, I did not make changes to the data file before loading it into R.
 							</p>
-							Columns in this Dataset
-							<p>
-								<FONT SIZE=4>Columns in this Dataset</FONT><br>
-								There are 73 columns in the dataset, I am going to introduce a few that I use here.<br>
-								<br>
-							</p>
-							<table>
-							  <tr>
-							    <th class="column">Column</th>
-							    <th>Description</th>
-							  </tr>
-								
-								<tr>
-									<th>COMMUNITY AREA NAME </th>
-									<th>Community Name</th>
-								</tr>
-								<tr>
-									<th>CENSUS BLOCK</th> 
-									<th>Census Block number obtained in the address matching/geocoding algorithms. Blank Census Blocks correspond to data that was aggregated to the Community Area due to privacy issues.</th>
-									
-								</tr>
-								<tr>
-									<th>BUILDING TYPE</th>
-									<th>Building Type: Residential, Commercial, Industrial. Blank data corresponds to blank Census Blocks.</th>
-								</tr>
-								<tr>
-									<th>KWH JANUARY 2010</th>
-									<th>Kilowatt hours (kWh) for January 2010</th>
-								</tr>
-								<tr>
-									<th>KWH FEBRUARY 2010</th>
-									<th>Kilowatt hours (kWh) for February 2010</th>
-								</tr>
-								<tr>
-									<th>KWH MARCH 2010</th>
-									<th>Kilowatt hours (kWh) for March 2010</th>
-								</tr>
-								<tr>
-									<th>KWH APRIL 2010</th>
-									<th>Kilowatt hours (kWh) for April 2010</th>
-								</tr>
-								<tr>
-									<th>KWH MAY 2010</th>
-									<th>Kilowatt hours (kWh) for May 2010</th>
-								</tr>
-								<tr>
-									<th>KWH JUNE 201</th>
-									<th>Kilowatt hours (kWh) for June 2010</th>
-								</tr>
-								<tr>
-									<th>KWH JULY 2010</th>
-									<th>Kilowatt hours (kWh) for July 2010</th>
-								</tr>
-								<tr>
-									<th>KWH AUGUST 2010</th>
-									<th>Kilowatt hours (kWh) for August 2010</th>
-								</tr>
-								<tr>
-									<th>KWH SEPTEMBER 2010</th>
-									<th>Kilowatt hours (kWh) for September 2010</th>
-								</tr>
-								<tr>
-									<th>KWH OCTOBER 2010</th>
-									<th>Kilowatt hours (kWh) for October 2010</th>
-								</tr>
-								<tr>
-									<th>KWH NOVEMBER 2010</th>
-									<th>Kilowatt hours (kWh) for November 2010</th>
-								</tr>
-								<tr>
-									<th>KWH DECEMBER 2010</th>
-									<th>Kilowatt hours (kWh) for December 2010</th>
-								</tr>
-								<tr>
-									<th>TOTAL KWH</th>
-									<th>Total 2010 kWh from ComEd accounts.</th>
-								</tr>
-								<tr>
-									<th>THERM JANUARY 2010</th>
-									<th>Therm consumption for January 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM FEBRUARY 2010</th>
-									<th>Therm consumption for February 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM MARCH 2010</th>
-									<th>Therm consumption for March 2010.</th>
-								</tr>
-								<tr>
-									<th>TERM APRIL 2010</th>
-									<th>Therm consumption for April 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM MAY 2010</th>
-									<th>Therm consumption for May 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM JUNE 2010</th>
-									<th>Therm consumption for June 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM JULY 2010</th>
-									<th>Therm consumption for July 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM AUGUST 2010</th>
-									<th>Therm consumption for August 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM SEPTEMBER 2010</th>
-									<th>Therm consumption for September 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM OCTOBER 2010</th>
-									<th>Therm consumption for October 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM NOVEMBER 2010</th>
-									<th>Therm consumption for November 2010.</th>
-								</tr>
-								<tr>
-									<th>THERM DECEMBER 2010</th>
-									<th>Therm consumption for December 2010.</th>
-								</tr>
-								<tr>
-									<th>TOTAL THERMS</th>
-									<th>Total 2010 Therms from Peoples accounts.</th>
-								</tr>
-								<tr>
-									<th>TOTAL POPULATION</th>
-									<th>Total population from Census 2010 report (QT-P6) Race alone or in combination and Hispanic or Latino 2010.</th>
-								</tr>
-								<tr>
-									<th>AVERAGE STORIES</th>
-									<th>Average number of stories based on data from Cook County Assessor's Office.</th>
-								</tr>
-								<tr>
-									<th>AVERAGE BUILDING AGE</th>
-									<th>Average Age of the buildings based on data from Cook County Assessor's Office.</th>
-								</tr>
-								<tr>
-									<th>OCCUPIED UNITS PERCENTAGE</th>
-									<th></th>
-								</tr>
-								<tr>
-									<th>RENTER-OCCUPIED HOUSING PERCENTAGE</th>
-									<th>Percentage of occupied housing units that are renters from Census report (QT-H2) Tenure, Household Size and Age of Householder</th>
-								</tr>
-							</table>
+							
 							
 							
 							
